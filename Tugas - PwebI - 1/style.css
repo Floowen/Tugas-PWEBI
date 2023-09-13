@@ -40,18 +40,27 @@ nav {
 
 .body-container{
     background: #f8b721be;
-    display: flex;
-    height: 95vh;
+    display: block;
+    height: 120vh;
     padding: 3rem calc((100vw - 1300px) / 2);
 }
 
+@media (min-width:1000px){
+    .body-container{
+        display: grid;
+        grid-template-columns: 1fr 0.5fr;
+        height: 95vh;
+    }
+}
+
 .column-left {
-    width: 75%;
+    width: 80%;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     color: black;
     padding: 0rem 2rem;
+    margin-bottom: 1rem;
 }
 
 .body-container p{
@@ -77,14 +86,14 @@ th, td {
 }
 
 .column-right {
-    width: 25%;
+    width: 75%;
     justify-content: center;
     align-items: center;
     padding: 0rem 2rem;
 }
 
 button {
-    padding: 1rem 3rem;
+    padding: 1rem 2rem;
     font-size: 1rem;
     border: none;
     color: #fdcc04;
@@ -98,4 +107,17 @@ button {
 button:hover {
     background: #ffff;
     color: #000;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem;
+    background: black;
+}
+
+footer p {
+    padding: 0rem 0.5rem;
+    color: white;
 }
